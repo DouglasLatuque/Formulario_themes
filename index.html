@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Syne+Mono&display=swap" rel="stylesheet">
+    <script src="script.js" ></script>
+    <title>Formulário com Temas</title>
+</head>
+
+<body>
+    <header>
+        <h1> Formulário de Cadastro </h1>
+        <div> 
+            <select>
+                <option>Light</option>
+                <option>Dark</option>
+            </select>
+        </div>
+    </header>
+
+    <article>
+        <form method="post" action="#">
+            <div>
+                <section>
+                    <div class="subtitulo">
+                        <h2>Dados Pessoais</h2>
+                    </div>
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" />
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+
+                    <span>
+                        <label for="pass">Nova Senha</label> 
+                        <img src="icone/hide.png" onclick="mostrarPass()"/>
+                    </span>
+                    <input type="password" id="pass"/>
+
+                    <label for="sexo">Sexo</label>
+                    <select id="sexo">
+                        <option selected></option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Outros</option>
+                    </select>
+                </section>
+                <section>
+                    <div class="subtitulo">
+                        <h2>Endereço</h2>
+                    </div> 
+                    <label for="street">Rua</label>
+                    <input type="text" id="street"/>
+
+                    <label for="city">Cidade</label>
+                    <input type="text" id="city">
+
+                    <label for="country">País</label>
+                    <input type="text" id="country"/>
+
+                    <label for="cep">CEP</label>
+                    <input type="number" id="cep"/>
+                </section>
+            </div>
+            <input type="submit" id="enviar" value="Cadastrar"/>
+        </form>
+    </article>
+
+    <footer>
+        <h3>Criado por: Douglas Latuque - © Todos os direitos reservados</h3>
+    </footer>
+</body>
+
+</html>
