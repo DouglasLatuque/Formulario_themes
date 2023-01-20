@@ -1,37 +1,58 @@
-function alterarTema() {
-    let range = document.querySelector('#temas').value;
-    console.log(range);
-
-    if (range == '1') {
-        let fonte = document.querySelectorAll('.fontePrincipalEscuro');
-        console.log(fonte);
-
-        for (i in fonte) {
-            fonte[i].classList.add('fontePrincipalClaro')
-            fonte[i].classList.remove('fontePrincipalEscuro')
-        }
-
-        
-  
-
-
-
-
-
-
-
-
-
-
-
+function mostrarPass (e, img) {
+    if (e.classList.contains('senha')==false) {
+        img.setAttribute('src', 'icone/show.png');
+        e.setAttribute('type', 'text');
+        e.classList.add('senha');
+        return;
     } else {
-        let fonte = document.querySelectorAll('.fontePrincipalClaro');
-        console.log(fonte);
-
-        for (i in fonte) {
-            fonte[i].classList.add('fontePrincipalEscuro')
-            fonte[i].classList.remove('fontePrincipalClaro')
-        }
-
+        img.setAttribute('src', 'icone/hide.png');
+        e.setAttribute('type', 'password');
+        e.classList.remove('senha');
+        return;
     }
 }
+function update () {
+    var select = document.querySelector('header select');
+    var modo = select.options[select.selectedIndex];
+        if (modo.text == 'Dark' ) {
+            let lightInputs = document.querySelectorAll('.light-inputs');
+            let lightBG = document.querySelectorAll('.lightBG') ;
+            let lightSubmit = document.querySelectorAll('.light-submit') ;
+            for (let x of lightInputs) {
+                x.classList.add('dark-inputs');
+        
+                x.classList.remove('light-inputs');
+            };
+            for (let x of lightBG) {
+                x.classList.add('darkBG');
+        
+                x.classList.remove('lightBG');
+            };
+            for (let x of lightSubmit) {
+                x.classList.add('dark-submit');
+        
+                x.classList.remove('light-submit');
+            };
+            return;
+        } else {
+            let lightInputs = document.querySelectorAll('.dark-inputs');
+            let lightBG = document.querySelectorAll('.darkBG') ;
+            let lightSubmit = document.querySelectorAll('.dark-submit') ;
+            for (let x of lightInputs) {
+                x.classList.add('light-inputs');
+        
+                x.classList.remove('dark-inputs');
+            };
+            for (let x of lightBG) {
+                x.classList.add('lightBG');
+        
+                x.classList.remove('darkBG');
+            };
+            for (let x of lightSubmit) {
+                x.classList.add('light-submit');
+        
+                x.classList.remove('dark-submit');
+            };
+            return;
+        };
+};

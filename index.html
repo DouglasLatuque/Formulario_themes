@@ -10,12 +10,12 @@
     <title>Formulário com Temas</title>
 </head>
 
-<body>
+<body class="lightBG">
     <header>
         <h1> Formulário de Cadastro </h1>
         <div> 
-            <select>
-                <option>Light</option>
+            <select class="lightBG" onChange="update()">
+                <option selected>Light</option>
                 <option>Dark</option>
             </select>
         </div>
@@ -24,48 +24,48 @@
     <article>
         <form method="post" action="#">
             <div>
-                <section>
+                <section class="light-inputs">
                     <div class="subtitulo">
                         <h2>Dados Pessoais</h2>
                     </div>
                     <label for="name">Nome</label>
-                    <input type="text" id="name" />
+                    <input type="text" id="name" class="light-inputs" required/>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" class="light-inputs" required />
 
                     <span>
                         <label for="pass">Nova Senha</label> 
-                        <img src="icone/hide.png" onclick="mostrarPass()"/>
+                        <img src="icone/hide.png" onclick="mostrarPass(document.querySelector('#pass'), this)"/>
                     </span>
-                    <input type="password" id="pass"/>
+                    <input type="password" id="pass" class="light-inputs" required />
 
                     <label for="sexo">Sexo</label>
-                    <select id="sexo">
+                    <select id="sexo"  class="light-inputs" >
                         <option selected></option>
                         <option>Masculino</option>
                         <option>Feminino</option>
                         <option>Outros</option>
                     </select>
                 </section>
-                <section>
+                <section class="light-inputs">
                     <div class="subtitulo">
                         <h2>Endereço</h2>
                     </div> 
                     <label for="street">Rua</label>
-                    <input type="text" id="street"/>
+                    <input type="text" id="street" class="light-inputs" />
 
                     <label for="city">Cidade</label>
-                    <input type="text" id="city">
+                    <input type="text" id="city" class="light-inputs" />
 
                     <label for="country">País</label>
-                    <input type="text" id="country"/>
+                    <input type="text" id="country" class="light-inputs" />
 
                     <label for="cep">CEP</label>
-                    <input type="number" id="cep"/>
+                    <input type="number" id="cep" class="light-inputs" />
                 </section>
             </div>
-            <input type="submit" id="enviar" value="Cadastrar"/>
+            <input type="submit" id="enviar" value="Cadastrar" class="light-submit" onclick="alert()"/>
         </form>
     </article>
 
