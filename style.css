@@ -136,6 +136,11 @@ section input {
 section input:focus {
     outline: 0;
 }
+section input[type='number']::-webkit-inner-spin-button,
+section input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} 
 select {
     outline: 0;
     border-width: 0;
@@ -154,6 +159,7 @@ section select {
     padding-left: 0;
     width: 80%;
     border-bottom: 1px solid var(--corLines);
+    cursor:pointer;
 }
 section input:last-child {
     margin-bottom: 0;
