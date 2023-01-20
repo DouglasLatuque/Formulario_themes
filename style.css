@@ -67,6 +67,15 @@ header {
     border-bottom: 1px solid var(--corLines);
     padding: 0px 30px;
 }
+header div {
+    display: flex; 
+    align-items: center;
+    margin-left: 10px;
+}
+#icone {
+    height: 20px;
+    margin-right: 5px;
+}
 
 
 
@@ -100,6 +109,7 @@ form div section {
     margin: auto;
 }
 section {
+    height: 315px;
     width: 300px;
     padding: 15px;
 }
@@ -189,4 +199,56 @@ footer {
 }
 footer h3 {
     font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:690px) {
+    article {
+        height: auto;
+    }
+    form {
+        margin: 20px 0px;
+    }
+    form div {
+        flex-direction: column;
+    }
+    section {
+        margin: 20px 0px;
+    }
+    #enviar {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 450px) {
+    header {
+        height: auto;
+        min-height: 100px;
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+    header div {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+@media (width > 690px) and (height < 600px) {
+    article {
+        height: auto;
+    }
+    form {
+        margin: 20px 0px;
+    }
+    section {
+        margin: 20px 0px;
+    }
+    #enviar {
+        margin-top: 20px;
+    }
 }

@@ -1,5 +1,0 @@
-
-
- mudança de tema, literal mente o que muda é apenas a paleta de cores do fundo e nada mais, os efeitos do site e do hover nos itens continuam os mesmos
-
- o site nao conta com efeitos muito flufluzentos como sombra nem nada do tipo, apenas um background no item selecionado e um hover nos paragrafos

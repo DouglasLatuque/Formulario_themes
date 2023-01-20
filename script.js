@@ -12,9 +12,11 @@ function mostrarPass (e, img) {
     }
 }
 function update () {
+    var lightAndDark = document.querySelector('#icone');
     var select = document.querySelector('header select');
     var modo = select.options[select.selectedIndex];
         if (modo.text == 'Dark' ) {
+            lightAndDark.setAttribute('src', 'icone/dark.png');
             let lightInputs = document.querySelectorAll('.light-inputs');
             let lightBG = document.querySelectorAll('.lightBG') ;
             let lightSubmit = document.querySelectorAll('.light-submit') ;
@@ -35,6 +37,7 @@ function update () {
             };
             return;
         } else {
+            lightAndDark.setAttribute('src', 'icone/light.png');
             let lightInputs = document.querySelectorAll('.dark-inputs');
             let lightBG = document.querySelectorAll('.darkBG') ;
             let lightSubmit = document.querySelectorAll('.dark-submit') ;
