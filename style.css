@@ -141,6 +141,9 @@ section input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 } 
+::-ms-reveal {
+    display: none;
+}
 select {
     outline: 0;
     border-width: 0;
